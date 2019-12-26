@@ -1,0 +1,9 @@
+version: '3.2'
+services:
+  cypress:
+    restart: always
+    image: cypress/included:3.8.0
+    working_dir: '/home/cypress'
+    volumes:
+      - './:/home/cypress'
+    command: npm test
